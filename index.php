@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<meta charset="UTF-8">
 <html>
   <head>
     <title>XKCD-Style Password Generator</title>
@@ -25,6 +25,9 @@
         <option value="11">11</option>
         <option value="12">12</option>
       </select><br>
+      Type of word separation: <input type="radio" name="separator" value="hyphen" checked>Hyphen
+      <input type="radio" name="separator" value="space">Space
+      <input type="radio" name="separator" value="camel">CamelCase<br>
       Include number: <input type="checkbox" name="number" value="yes"><br>
       Include symbol: <input type="checkbox" name="symbol" value="yes"><br>
       Include capital: <input type="checkbox" name="capital" value="yes"><br>
@@ -34,7 +37,7 @@
   </div>
   <div id = "credits">
     Inspired by <a href = "http://xkcd.com/936/">Randall Munroe's XKCD</a><br>
-    <img src = "password_strength.png" /><br>
+    <img src = "password_strength.png" alt="XKCD comic"/><br>
     Word list from <a href = "http://www.rupert.id.au/resources/1000-words.php">http://www.rupert.id.au/resources/1000-words.php</a>
   </div>
   </body>

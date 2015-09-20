@@ -20,10 +20,22 @@
   else {
     $numwords = $_POST["wordsnum"];
   }
-  for ($i = 1; $i < $numwords; $i++)  {
-    $passphrase .= "-".$words[rand(0,999)][0];
-  }
 
+  if ($_POST["separator"] == "hyphen") {
+    for ($i = 1; $i < $numwords; $i++)  {
+    $passphrase .= "-".$words[rand(0,999)][0];
+    }
+  }
+  elseif ($_POST["separator"] == "space") {
+    for ($i = 1; $i < $numwords; $i++)  {
+      $passphrase .= " ".$words[rand(0,999)][0];
+    }
+  }
+  else {
+    for ($i = 1; $i < $numwords; $i++)  {
+      $passphrase .= ucfirst($words[rand(0,999)][0]);
+    }
+  }
   # appends a random number if the number box is checked
   if (!empty($_POST["number"])) {
     $passphrase .= rand(1,999);
