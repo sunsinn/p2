@@ -29,4 +29,8 @@
     $passphrase .= $chars[rand(0,9)];
   }
 
+  # capitalizes first letter if the capital box is checked
+  if (!empty($_POST["capital"])) {
+    $passphrase = ucfirst($passphrase);  
+  }
 ?>

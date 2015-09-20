@@ -14,7 +14,7 @@
     </div>
     <div id="form">
     <form method="POST" action="index.php">
-      Password length:<select name="wordsnum">
+      Number of words:<select name="wordsnum">
         <option value="4">4</option>
         <option value="5">5</option>
         <option value="6">6</option>
@@ -27,6 +27,7 @@
       </select><br>
       Include number: <input type="checkbox" name="number" value="yes"><br>
       Include symbol: <input type="checkbox" name="symbol" value="yes"><br>
+      Include capital: <input type="checkbox" name="capital" value="yes"><br>
 
       <input type="submit" value="Give me a password!">
     </form>
