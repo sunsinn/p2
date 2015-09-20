@@ -14,7 +14,12 @@
   $passphrase = $words[rand(0,999)][0];
 
   #adds remaining random words to password string
-  $numwords = $_POST["wordsnum"];
+  if (empty($_POST["wordsnum"])) {
+    $numwords = 4;
+  }
+  else {
+    $numwords = $_POST["wordsnum"];
+  }
   for ($i = 1; $i < $numwords; $i++)  {
     $passphrase .= "-".$words[rand(0,999)][0];
   }
@@ -31,6 +36,6 @@
 
   # capitalizes first letter if the capital box is checked
   if (!empty($_POST["capital"])) {
-    $passphrase = ucfirst($passphrase);  
+    $passphrase = ucfirst($passphrase);
   }
 ?>
