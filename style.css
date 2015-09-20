@@ -1,0 +1,23 @@
+#password {
+  text-align: center;
+  font-family: monospace;
+  font-size: 2em;
+  background-color: #99FF99;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#form {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#credits {
+  text-align: center;
+  image-orientation: center;
+}
+h3 {
+  color: gray;
+  text-indent: 15px;
+}

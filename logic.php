@@ -7,14 +7,26 @@
   }
   fclose($file);
 
-# adds first random word to password string
-$r = array_rand($words);
-$password = $words[$r][0];
+  # Builds an array of special characters
+  $chars = array('!', '@', '#', '$', '%', '^', '&', '*', '(', ')');
 
-$numwords = (int)$_POST["wordsnum"];
-for ($i = 1; $i < $numwords; $i++)  {
-    $r = array_rand($words);
-    $password .= "-".$words[$r][0];
-}
+  # adds first random word to password string
+  $passphrase = $words[rand(0,999)][0];
+
+  #adds remaining random words to password string
+  $numwords = $_POST["wordsnum"];
+  for ($i = 1; $i < $numwords; $i++)  {
+    $passphrase .= "-".$words[rand(0,999)][0];
+  }
+
+  # appends a random number if the number box is checked
+  if (!empty($_POST["number"])) {
+    $passphrase .= rand(1,999);
+  }
+
+  # appends a random character from the chars array if the character box is checked
+  if (!empty($_POST["symbol"])) {
+    $passphrase .= $chars[rand(0,9)];
+  }
 
 ?>
