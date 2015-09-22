@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
+
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>XKCD-Style Password Generator</title>
     <?php require 'logic.php'; ?>
     <link rel="stylesheet" href="style.css">
